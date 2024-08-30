@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "rootDir": "./WebAPI/src",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "outDir": "./dist/",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "ts-node": { "transpileOnly": true }, 
+  "scripts": {
+    "dev": "npx nodemon src/server.ts --watch 'src/' -e ts",
+    "compile": "npx tsc",
+    "start": "node ./dist/server.js"
+  }
+}
+
+ 
