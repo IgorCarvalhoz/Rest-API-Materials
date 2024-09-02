@@ -11,13 +11,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 router.get('/', async ( res: Response) => {
-    res.send('Ta rodando');
+    res.send( {ok:true})
 });
 router.post('/add', async (req: Request, res: Response) => {
     return new CreateMaterialController().handle(req, res);
 });
 router.get('/consult', async (req: Request, res: Response) => {
-    res.send(ConsultMaterialController);
+    return new ConsultMaterialController(). handle(req, res);
 });
 
 

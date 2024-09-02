@@ -12,11 +12,11 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
-model Material {
+model material {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
   nome       String   
   descricao     String  
   preco        Float @unique
   created_at DateTime? @default(now())  
-  @@map("costumers")
+  @@map("material")
 }

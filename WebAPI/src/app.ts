@@ -3,7 +3,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import helmet from 'helmet';
-import router from './routes/routes';
+import router from './Routes/routes';
 
 const app = express(); //iniciando express
 app.use(morgan('tiny'));
